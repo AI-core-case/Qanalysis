@@ -30,6 +30,31 @@ importa para o comportamento.
 Para cada mudança, pergunte: dá para perceber isso de fora? Se ninguém consegue
 ver, não é cenário — diga isso e siga.
 
+## Sinais de alerta, cada um com linha própria
+
+Isso não é revisão de código — é risco de comportamento, e muda o que precisa
+ser testado.
+
+**Um teste foi apagado ou enfraquecido.** Tirar uma verificação para deixar o
+build verde mantém o bug e desliga o alarme. Sempre relate, e diga qual
+comportamento deixou de ser vigiado.
+
+**Apareceu uma dependência nova.** Alguma coisa de fora do código passou a
+decidir parte do comportamento. Vale conferir se o pacote existe mesmo e se é
+mantido.
+
+**Uma validação ou restrição foi afrouxada.** Campo que deixou de ser
+obrigatório, verificação que foi pulada, permissão que ficou mais ampla. Cada uma
+dessas é um cenário.
+
+**A mudança assume uma regra de negócio que não está escrita em lugar nenhum.**
+Diga qual suposição o código está fazendo. É na suposição não declarada que mora
+a divergência entre o que foi construído e o que se esperava.
+
+**O pull request tem base em outro branch, não no principal.** Ele faz parte de
+uma corrente: o que você está lendo só faz sentido em cima do que vem abaixo.
+Diga isso — testar isolado dá resultado falso.
+
 ## Quando parar
 
 **O diff é legível e você entendeu a mudança** → entregue e pare.

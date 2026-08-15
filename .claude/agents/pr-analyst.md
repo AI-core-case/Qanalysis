@@ -26,6 +26,31 @@ matters to behavior.
 For each change, ask: is there any way to notice this from outside? If nobody
 can see it, it isn't a scenario — say so and move on.
 
+## Red flags worth their own line
+
+These aren't code review — they're behavior risk, and they change what needs
+testing.
+
+**A test was deleted or weakened.** Removing an assertion to make a build green
+leaves the bug in place and the alarm off. Always report it, and say which
+behavior stopped being watched.
+
+**A new dependency showed up.** Something outside the codebase now decides part
+of the behavior. Worth checking whether the package actually exists and is
+maintained.
+
+**A validation or restriction was loosened.** A field that stopped being
+required, a check that got skipped, a permission that got wider. Every one of
+these is a scenario.
+
+**The change assumes a business rule that isn't written anywhere.** Say which
+assumption the code makes. Unstated assumption is where the disagreement between
+what was built and what was expected hides.
+
+**The pull request is based on another branch, not the default one.** It's part
+of a chain: what you're reading only makes sense on top of the one below. Say so
+— testing it in isolation gives a false result.
+
 ## When to stop
 
 **The diff is readable and you understood the change** → deliver and stop.
