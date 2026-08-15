@@ -1,0 +1,38 @@
+# Regras do QA — rascunho
+
+Configuração e hábito humano. Nada aqui vai para o prompt das agentes.
+
+## Ao capturar
+
+- Gravação de no máximo **1 minuto**
+- Bug de resposta de bot é **print**, nunca vídeo
+
+## O que escrever
+
+Formato:
+
+```
+<ID do cenário> — <título do cenário> <marcador>
+<se souber: em que momento e o que apareceu de errado>
+```
+
+- **`X`** — o cenário falhou
+- **`✔️`** — o cenário passou, mas apareceu outro bug
+
+**Onde escrever:**
+- Vídeo → na descrição, dentro do Jam
+- Print → no chat, junto com a imagem
+
+## Configuração
+
+- Manter o resumo automático do Jam **desligado** — o campo de título e
+  descrição é do processo
+  <!-- falta: onde exatamente se desliga -->
+
+## No chat
+
+- Mandar só o link. Sem instrução, sem explicação.
+
+## Para verificar depois
+
+- https://jam.dev/docs/recording-links

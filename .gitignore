@@ -1,0 +1,20 @@
+# Memória e dados de quem usa — nunca versionar
+.memory/
+memoria/
+.qa-runs/
+
+# Configuração real (os .example ficam versionados)
+.env
+config.yaml
+config.local.*
+
+# Credenciais
+*.pem
+*.key
+
+# Dependências e artefatos
+node_modules/
+.venv/
+__pycache__/
+test-results/
+playwright-report/
