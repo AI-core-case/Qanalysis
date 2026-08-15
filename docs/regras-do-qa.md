@@ -33,6 +33,18 @@ Formato:
 
 - Mandar só o link. Sem instrução, sem explicação.
 
+## Uma conversa por assunto
+
+**Continue na mesma conversa** enquanto for o mesmo bug ou o mesmo cenário — a
+agente já tem o contexto e você não repete nada.
+
+**Abra conversa nova ao trocar de assunto**: outro card, outro produto, outra
+tarefa. Não use a mesma conversa o dia inteiro.
+
+O motivo é custo: cada mensagem nova carrega junto tudo o que já foi dito antes.
+Numa conversa que virou o dia, você paga o histórico inteiro para perguntar uma
+coisa simples — e a agente ainda se confunde com assunto que já morreu.
+
 ## Para verificar depois
 
 - https://jam.dev/docs/recording-links
