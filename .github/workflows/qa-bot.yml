@@ -1,0 +1,24 @@
+name: QA Bot
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  comentar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gerar token do App
+        id: token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.QAGENTS_APP_ID }}
+          private-key: ${{ secrets.QAGENTS_APP_PRIVATE_KEY }}
+
+      - name: Comentar no PR
+        env:
+          GH_TOKEN: ${{ steps.token.outputs.token }}
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} \
+            --repo ${{ github.repository }} \
+            --body "Olá! Sou o QAgents AI 🤖 — a partir de agora eu comento os resultados de QA por aqui."
